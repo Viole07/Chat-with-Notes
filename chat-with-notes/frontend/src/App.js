@@ -2,6 +2,11 @@ import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 
+
+
+const API_URL = "https://chat-with-notes.onrender.com"; // Updated backend URL
+
+
 function App() {
   const [file, setFile] = useState(null);
   const [sessionId, setSessionId] = useState('');
@@ -21,7 +26,7 @@ function App() {
 
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:5000/upload', formData);
+      const response = await axios.post(`${API_URL}/upload`, formData);
       setSessionId(response.data.sessionId);
       alert(`✅ File uploaded!`);
     } catch (err) {
@@ -41,7 +46,7 @@ function App() {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/chat', {
+      const response = await axios.post(`${API_URL}/chat`, {
         sessionId,
         userMessage: question,
       });
