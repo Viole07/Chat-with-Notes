@@ -1,24 +1,24 @@
-# Chat with Your Notes 📚🤖
+# 🏦 Loan Approval Prediction System
 
-A smart and intuitive chat-based AI assistant that enables you to effortlessly interact with the content from your uploaded notes (PDF or text files). Built with React and Node.js, powered by OpenAI's GPT-3.5-turbo.
+A smart and intuitive machine learning-based web app that predicts whether a loan will be approved based on applicant details. Built with **Flask**, styled with **Bootstrap**, and powered by a trained **scikit-learn model**.
 
 ---
 
 ## 🚀 Features
 
-- **PDF & Text File Upload**: Easily upload your notes.
-- **AI-Powered Chat**: Ask questions and get intelligent answers based strictly on your notes.
-- **Instant Responses**: Fast and accurate embedding-based search and chat generation.
-- **Dark/Light Mode**: Automatically adapt UI to your system preferences or manually toggle.
-- **Markdown Rendering**: Supports markdown formatting in answers.
+- **Loan Form Input**: Simple UI to enter all relevant loan parameters.
+- **ML-Powered Predictions**: Uses a trained classification model to approve or reject.
+- **Confidence Score**: Displays the model's confidence percentage.
+- **Dark Mode**: User-friendly dark/light mode toggle.
+- **Responsive Design**: Mobile-friendly and animated UI.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React, Axios, React Markdown
-- **Backend**: Node.js, Express
-- **AI**: OpenAI GPT-3.5-turbo, OpenAI Embeddings
+- **Frontend**: HTML, CSS, Bootstrap
+- **Backend**: Flask (Python)
+- **Model**: scikit-learn, joblib
 - **Deployment**: Render
 
 ---
@@ -26,80 +26,68 @@ A smart and intuitive chat-based AI assistant that enables you to effortlessly i
 ## 📦 Project Structure
 
 ```
-Chat-with-Notes
-├── backend
-│   ├── index.js
-│   ├── package.json
-│   ├── package-lock.json
-│   └── .env (API keys)
-└── frontend
-    ├── src
-    │   ├── App.js
-    │   └── index.js
-    ├── public
-    │   ├── logo.png
-    │   └── upload-file.png
-    ├── package.json
-    └── yarn.lock
+Loan-Approval-Prediction-System/
+├── csv/
+│   ├── test.csv
+│   └── train.csv
+├── Flask/
+│   ├── static/
+│   │   └── style.css
+│   ├── templates/
+│   │   └── index.html
+│   ├── app.py
+├── loan_approval_model_optimized.pkl
+├── loan_approval_model.pkl
+├── Untitled.ipynb
+├── README.md
 ```
 
 ---
 
 ## 💻 Setup & Installation
 
-### Backend
-
-Navigate to the backend folder:
-
+### 1. Clone the Repository
 ```bash
-cd backend
-npm install
+git clone https://github.com/Viole07/Loan-Approval-Prediction-System.git
+cd Loan-Approval-Prediction-System/Flask
 ```
 
-Create a `.env` file in the backend directory and add your OpenAI API key:
-
-```env
-OPENAI_API_KEY=your_openai_api_key_here
-```
-
-Run the backend server:
-
+### 2. Create & Activate Virtual Environment
 ```bash
-node index.js
+python -m venv venv
+venv\Scripts\activate        # Windows
+# OR
+source venv/bin/activate     # macOS/Linux
 ```
 
-### Frontend
-
-Navigate to the frontend folder:
-
+### 3. Install Required Packages
 ```bash
-cd frontend
-yarn install
+pip install flask scikit-learn numpy joblib
 ```
 
-Run the frontend app:
-
+### 4. Run the Flask App
 ```bash
-yarn start
+python app.py
 ```
+
+Navigate to: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 ---
 
-## 🚀 Deployment
-
-The backend and frontend are deployed separately:
-
-- **Backend**: Hosted on [Render](https://render.com/).
-- **Frontend**: Recommended to host on platforms like [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/).
-
-Connect your GitHub repository to Render and Vercel/Netlify for continuous deployment upon code updates.
+## 🔐 .gitignore Example
+```gitignore
+__pycache__/
+venv/
+*.pkl
+.env
+*.csv
+.DS_Store
+```
 
 ---
-
 
 ## 📜 License
-
-MIT License
+MIT License — free to use, modify, and distribute.
 
 ---
 
