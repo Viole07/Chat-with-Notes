@@ -93,3 +93,14 @@ The backend and frontend are deployed separately:
 - **Frontend**: Recommended to host on platforms like [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/).
 
 Connect your GitHub repository to Render and Vercel/Netlify for continuous deployment upon code updates.
+
+---
+
+
+## 📜 License
+
+MIT License
+
+---
+
+Built with ❤️ by [@Viole07](https://github.com/Viole07)
